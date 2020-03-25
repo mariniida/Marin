@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500,700&display=swap&subset=japanese');
+
+#app {
+  font-family: 'Josefin Sans','Noto Sans JP', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #333333;
+}
+
+/* Layout Settings*/
+.page {
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.section {
+  margin: 40px 0px;
+}
+
+.subsection{
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+
+.width80{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.halfWidth{
+  width: 40em;
+}
+
+.fullWidth{
+  width: 100%;
+}
+
+.dashed{
+  border-bottom: 1px dashed #e7e7e7;
+  width: 70%;
+  margin: 20px;
+  padding: 20px;
+}
+
+
+/* Image Settings*/
+el-image.responsive {
+    height: 100%;
+    object-fit: cover;
+}
+
+.el-image{
+  margin: 5px;
+}
+
+img {
+  width: 90%;
+  height: auto;
+}
+
+#prismic .block-img {
+  text-align: center;
+  padding: 1rem;
+}
+
+#prismic .block-img img{
+  width: 60%;
+}
+
+
+/* Text Setting */
+.textRight {
+  text-align: right;
+}
+
+.textLeft {
+  text-align: left;
+}
+
+ul, li {
+  list-style: none;
+}
+
+ul{
+  padding-inline-start:0px;
+}
+
+ol{
+  text-align: left;
+}
+
+
+/* flexBox */
+.flexContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.flexItem {
+  margin: 10px;
+}
+
+.tileContainer {
+  flex-wrap:wrap;
+}
+
+/* colours */
+/*might use sass later*/
+:root {
+  --white:#FFFFFF;
+  --keyColor:#3550B2;
+}
+
+/* font sizes */
+html {
+  font-size: 62.5%;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 3rem;
+  margin: 25px 0px;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 2rem;
+  margin: 20px 0px;
+}
+
+h3 {
+  font-weight: 300;
+  font-size: 2rem;
+  margin: 10px 0px;
+}
+
+h4{
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin: 4px 0px;
+}
+
+h5{
+  font-weight: 300;
+  font-size: 1.5rem;
+  margin: 2px;
+}
+
+h6{
+  font-weight: 300;
+  font-size: 2rem;
+  margin: 0px;
+  color: #3550B2;
+}
+
+p {
+  font-weight: 300;
+  font-size: 1.4rem;
+  margin: 2px;
+}
+
+/* Prismic specific settings */
+#prismic li {
+  list-style: circle;
+  font-weight: 300;
+  font-size: 1.4rem;
+  margin: 0.5rem;
+}
+
+#prismic h2 {
+  font-weight: 500;
+  font-size: 2rem;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  padding: 0 55px;
+}
+
+#prismic h2:before, #prismic h2:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 45px;
+  height: 1px;
+  background-color: black;
+}
+
+#prismic h2:before {
+  left:0;
+}
+
+#prismic h2:after {
+  right: 0;
+}
+
+#prismic h3 {
+  font-weight: 300;
+  font-size: 2rem;
+  margin: 20px 0px 15px 0px;
+  padding: .5em .75em .25em .75em;
+  border-bottom: 1px solid #ccc;
+}
+
+#prismic p {
+  text-align: left;
+}
+
+
+
+/* element-ui */
+el-divider {
+  font-weight: 300;
+  font-size: 1.5em;
+}
+
+.el-loading-spinner .path {
+	stroke: #3550B2 !important;
+}
+
+.slotText {
+  vertical-align: middle;
+  text-align: center;
+  margin: 15px;
+}
+
+.el-collapse {
+  border-top: 1px solid #AEB8DE !important;
+}
+
+.el-collapse, .el-collapse-item__header, .el-collapse-item__wrap {
+  border-bottom: 1px solid #AEB8DE !important;
+}
+
+/* Media query*/
+@media screen and (max-width:480px) {
+	 /* for iPhone  */
+
+   .link{
+     width:100%;
+   }
+
+   .responsiveWidth {
+     width: 100%;
+   }
+
+   .bannerTxt {
+     order:1;
+   }
+
+   .bannerImg {
+     order: 2;
+   }
+
+}
+@media screen and (min-width:480px) {
+	 /* for iPhone Landscape */
+
+   .link{
+     width:100%;
+   }
+
+   .responsiveWidth{
+     width: 100%;
+   }
+
+   .bannerTxt {
+     order:1;
+   }
+
+   .bannerImg {
+     order: 2;
+   }
+
+}
+@media screen and (min-width:768px) and ( max-width:1024px) {
+	 /* for iPad  */
+   .link{
+      width:70%;
+      margin: 0 auto;
+   }
+
+   .responsiveWidth{
+     width: 80%;
+     margin: 0 auto;
+   }
+   .bannerTxt {
+     order:1;
+   }
+
+   .bannerImg {
+     order: 2;
+   }
+
+
+}
+@media screen and (min-width:1025px) {
+	 /* for PC */
+   .link{
+      width:50%;
+   }
+
+   .responsiveWidth{
+     width: 80%;
+     margin: 0 auto;
+   }
+
+   .bannerTxt {
+     order:2;
+   }
+
+   .bannerImg {
+     order: 1;
+   }
+
+}
