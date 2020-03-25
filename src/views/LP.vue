@@ -1,51 +1,37 @@
 <template>
   <div>
-		<div class="landingSection flexContainer tileContainer">
-
-			<el-image class="flexItem"
-			 :src="profile.img" fit="cover">
-				 <div slot="placeholder">
-					 <h4 class="slottext">Loading...</h4>
-				 </div>
-			</el-image>
-
-			<div class="flexItem LPtext">
-				<h1>Hi, there. {{profile.tagLine}}</h1>
-				<h3>{{profile.bio}}</h3>
-			</div>
-
-		</div>
+    <h1>Hello there</h1>
   </div>
 </template>
 
 <script>
 
 export default {
-  name: 'landing',
+  name: 'LP',
   data () {
     return {
-			profile:{
-        tagLine:"I'm Marin Iida.",
-        bio:"An aspiring UI/UX designer based in Japan (for now).",
-        img: require("../assets/IMG_2338.jpg"),
-      },
     }
+  },
+  components:{
+
   }
 }
 </script>
 
+<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.landingSection {
-	margin: 60px 0px;
+h1, h2 {
+  font-weight: normal;
 }
-
-.el-image {
-	width: 350px;
-	height: 400px;
+ul {
+  list-style-type: none;
+  padding: 0;
 }
-
-.LPtext {
-	padding: 20px;
+li {
+  display: inline-block;
+  margin: 0 10px;
 }
-
+a {
+  color: #42b983;
+}
 </style>

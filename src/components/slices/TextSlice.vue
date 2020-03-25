@@ -10,7 +10,3 @@ export default {
   name: 'text-slice'
 }
 </script>
-<style>
-
-
-</style>

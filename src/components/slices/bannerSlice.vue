@@ -5,10 +5,12 @@
 		</div>
 				<li class="flexContainer tileContainer"
 				v-for="item in slice.items" :key="item.id">
-					<div class="flexItem halfWidth bannerImg">
-						<el-image :src="item.bannerimg.url" fit="contain"></el-image>
+					<div class="flexItem halfWidth">
+						<el-image
+			        :src="item.bannerimg.url"
+			        fit="contain"></el-image>
 					</div>
-					<div class="flexItem halfWidth textLeft bannerTxt" id="prismic">
+					<div class="flexItem halfWidth textLeft" id="prismic">
 						<prismic-rich-text :field="item.bannertext"/>
           </div>
 				</li>
@@ -22,14 +24,6 @@ export default {
 }
 </script>
 
-<style scoped>
-
-el-image {
-	width: 500px;
-	height: 400px;
-}
-
-
-
+<style>
 
 </style>

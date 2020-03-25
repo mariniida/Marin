@@ -21,8 +21,6 @@
 
 .subsection{
   margin-top: 20px;
-  margin-bottom: 20px;
-
 }
 
 .width80{
@@ -45,31 +43,15 @@
   padding: 20px;
 }
 
-
-/* Image Settings*/
-el-image.responsive {
-    height: 100%;
-    object-fit: cover;
-}
-
-.el-image{
-  margin: 5px;
-}
-
 img {
-  width: 90%;
+  width: 80%;
   height: auto;
+  margin: auto 0;
 }
 
-#prismic .block-img {
+.block-img{
   text-align: center;
-  padding: 1rem;
 }
-
-#prismic .block-img img{
-  width: 60%;
-}
-
 
 /* Text Setting */
 .textRight {
@@ -92,6 +74,10 @@ ol{
   text-align: left;
 }
 
+
+.strictLine {
+  line-break: strict;
+}
 
 /* flexBox */
 .flexContainer {
@@ -162,21 +148,21 @@ h6{
 
 p {
   font-weight: 300;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   margin: 2px;
 }
 
 /* Prismic specific settings */
-#prismic li {
+#prismic li{
   list-style: circle;
   font-weight: 300;
-  font-size: 1.4rem;
-  margin: 0.5rem;
+  font-size: 1.5rem;
+  margin: 2px;
 }
 
-#prismic h2 {
+#prismic h2{
   font-weight: 500;
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
   position: relative;
   display: inline-block;
@@ -201,28 +187,49 @@ p {
   right: 0;
 }
 
-#prismic h3 {
+#prismic h3{
   font-weight: 300;
   font-size: 2rem;
-  margin: 20px 0px 15px 0px;
+  margin: 20px 0px 0px 0px;
+
   padding: .5em .75em .25em .75em;
-  border-bottom: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+
 }
 
-#prismic p {
+#prismic p{
   text-align: left;
 }
 
 
 
 /* element-ui */
-el-divider {
+el-divider{
   font-weight: 300;
   font-size: 1.5em;
 }
 
+el-image.responsive {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
 .el-loading-spinner .path {
 	stroke: #3550B2 !important;
+}
+
+.el-button{
+	margin: 5px !important;
+	border: 1px solid #3550B2 !important;
+	color: #3550B2 !important;
+}
+
+.el-button:hover{
+	border: 1px solid #3550B2 !important;
+	color: white !important;
+	background: #3550B2 !important;
+	cursor: pointer;
 }
 
 .slotText {
@@ -233,6 +240,7 @@ el-divider {
 
 .el-collapse {
   border-top: 1px solid #AEB8DE !important;
+
 }
 
 .el-collapse, .el-collapse-item__header, .el-collapse-item__wrap {
@@ -240,26 +248,7 @@ el-divider {
 }
 
 /* Media query*/
-@media screen and (max-width:480px) {
-	 /* for iPhone  */
 
-   .link{
-     width:100%;
-   }
-
-   .responsiveWidth {
-     width: 100%;
-   }
-
-   .bannerTxt {
-     order:1;
-   }
-
-   .bannerImg {
-     order: 2;
-   }
-
-}
 @media screen and (min-width:480px) {
 	 /* for iPhone Landscape */
 
@@ -269,14 +258,6 @@ el-divider {
 
    .responsiveWidth{
      width: 100%;
-   }
-
-   .bannerTxt {
-     order:1;
-   }
-
-   .bannerImg {
-     order: 2;
    }
 
 }
@@ -291,17 +272,9 @@ el-divider {
      width: 80%;
      margin: 0 auto;
    }
-   .bannerTxt {
-     order:1;
-   }
-
-   .bannerImg {
-     order: 2;
-   }
-
 
 }
-@media screen and (min-width:1025px) {
+@media screen and (min-width:1024px) {
 	 /* for PC */
    .link{
       width:50%;
@@ -312,12 +285,5 @@ el-divider {
      margin: 0 auto;
    }
 
-   .bannerTxt {
-     order:2;
-   }
-
-   .bannerImg {
-     order: 1;
-   }
 
 }
