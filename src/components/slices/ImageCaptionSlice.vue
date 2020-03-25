@@ -4,8 +4,8 @@
 			  <prismic-rich-text id="prismic" :field="slice.primary.captiontitle"/>
 		</div>
 			<li v-for="item in slice.items" :key="item.id">
-				<div class="imgCaption">
-					<prismic-image :field="item.image" class="imgCaption"/>
+				<div>
+					<prismic-image :field="item.image" />
 				</div>
 	      <p class="image-label">
 					{{ $prismic.richTextAsPlain(item.caption)}}
@@ -32,12 +32,5 @@ export default {
   color: #949494;
 	margin-bottom: 5rem;
 }
-
-.imgCaption {
-	max-width: 500px;
-  object-fit: contain;
-	margin: 0 auto;
-}
-
 
 </style>
