@@ -9,11 +9,6 @@
 import NavBar from './components/NavBar'
 export default {
   name: 'App',
-  data () {
-    return {
-
-    }
-  },
   components:{
     NavBar
   }
@@ -22,5 +17,4 @@ export default {
 
 <style>
 @import "./style/global.css"
-
 </style>
