@@ -13,11 +13,13 @@
       <div class="flexItem description">
 				<div class="section">
 					<h2>飯田まりん</h2>
+					<div class="paragraph">
 					<p>岐阜県に生まれ、１３歳で家族とオーストラリアに移住。</p>
 					<p>新しい環境で勉学に励むも、英語力以外のスキルを得たいと強く感じました。</p>
 					<p>「国や言語の垣根を超えたスキルとはなんだろう。」と考えた結果、デザイン職に興味を持ち、メルボルン大学でデザイン学部に進学しました。</p>
 					<p>大学ではデジタルテクノロジーを専攻しHCIについて学びながら、グラフィックデザインとコンピューティングを副専攻。</p>
 					<p>UI/UX、ゲームデザイン、ブランディング、ウェブサイト制作など、幅広い種類の課題に取り組みました。</p>
+</div>
 				</div>
 
 				<div class="links">
@@ -100,7 +102,7 @@ export default {
         img: require("../assets/IMG_2338.jpg"),
       },
       timelineEvents: [
-        {
+				{
           startDate: '2012 Feb',
           endDate: '2016 Nov',
           heading: 'Somerset College',
@@ -275,6 +277,10 @@ export default {
 
 .alignEnd{
 	align-items: flex-end
+}
+
+.paragraph{
+	line-height:1.5;
 }
 
 </style>
