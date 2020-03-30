@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="prismicContent">
         <!-- Slice section template -->
         <section v-for="(slice, index) in slices" :key="'slice-' + index">
 
@@ -8,12 +8,12 @@
                 <image-gallery :slice="slice"/>
             </template>
 
-						<!-- Text slice template -->
+						 <!--Text slice template -->
             <template v-else-if="slice.slice_type === 'text'">
                 <text-slice :slice="slice"></text-slice>
             </template>
 
-						<!-- Text with title slice template -->
+						<!-- Text with title slice template-->
             <template v-else-if="slice.slice_type === 'text_with_title'">
                 <TextWithTitleSlice :slice="slice"></TextWithTitleSlice>
             </template>
@@ -59,3 +59,6 @@ export default {
   },
 }
 </script>
+<style>
+
+</style>

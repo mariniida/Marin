@@ -22,16 +22,11 @@
 .subsection{
   margin-top: 20px;
   margin-bottom: 20px;
-
 }
 
 .width80{
   width: 80%;
   margin: 0 auto;
-}
-
-.halfWidth{
-  width: 40em;
 }
 
 .fullWidth{
@@ -63,7 +58,7 @@ img {
 
 #prismic .block-img {
   text-align: center;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 #prismic .block-img img{
@@ -71,7 +66,6 @@ img {
   width: 100%;
   max-height: 100%;
   max-width: 100%;
-
 }
 
 
@@ -136,7 +130,6 @@ h1 {
 h2 {
   font-weight: 400;
   font-size: 2rem;
-  margin: 20px 0px;
 }
 
 h3 {
@@ -160,64 +153,15 @@ h5{
 h6{
   font-weight: 300;
   font-size: 2rem;
-  margin: 0px;
   color: #3550B2;
+  margin: 0px;
 }
 
 p {
   font-weight: 300;
-  font-size: 1.4rem;
-  margin: 2px;
+  font-size: 1.5rem;
+  line-height: 1.5;
 }
-
-/* Prismic specific settings */
-#prismic li {
-  list-style: circle;
-  font-weight: 300;
-  font-size: 1.4rem;
-  margin: 0.5rem;
-}
-
-#prismic h2 {
-  font-weight: 500;
-  font-size: 2rem;
-  text-transform: uppercase;
-  position: relative;
-  display: inline-block;
-  padding: 0 55px;
-}
-
-#prismic h2:before, #prismic h2:after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  display: inline-block;
-  width: 45px;
-  height: 1px;
-  background-color: black;
-}
-
-#prismic h2:before {
-  left:0;
-}
-
-#prismic h2:after {
-  right: 0;
-}
-
-#prismic h3 {
-  font-weight: 300;
-  font-size: 2rem;
-  margin: 20px 0px 15px 0px;
-  padding: .5em .75em .25em .75em;
-  border-bottom: 1px solid #ccc;
-}
-
-#prismic p {
-  text-align: left;
-}
-
-
 
 /* element-ui */
 el-divider {
@@ -261,7 +205,9 @@ el-divider {
 
    .bannerImg {
      order: 2;
+     text-align: center;
    }
+
 
 }
 @media screen and (min-width:480px) {
@@ -281,6 +227,7 @@ el-divider {
 
    .bannerImg {
      order: 2;
+      text-align: center;
    }
 
 }
@@ -301,6 +248,7 @@ el-divider {
 
    .bannerImg {
      order: 2;
+     text-align: center;
    }
 
 
@@ -322,6 +270,55 @@ el-divider {
 
    .bannerImg {
      order: 1;
+   	text-align: right;
    }
 
+}
+
+
+
+
+/* Prismic Main Content */
+.prismicContent {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 0px;
+}
+
+.prismicContent h1{
+  font-size: 2rem;
+  margin-top: 7rem;
+  margin-bottom: 1rem;
+  background-color: #3550B2;
+  color: white;
+}
+
+.prismicContent h2{
+  font-size: 2rem;
+  margin-top: 6rem;
+  margin-bottom: 0px;
+}
+
+.prismicContent h3{
+  text-align: left;
+  font-weight: 500;
+  font-size: 1.75rem;
+  padding-top: 3rem;
+  color: #3550B2;
+}
+
+.prismicContent p{
+  margin: 0 auto;
+  font-weight: 300;
+  line-height: 1.7;
+  text-align: left;
+  font-size: 1.5rem;
+  text-align: justify;
+}
+
+.prismicContent ol li{
+  list-style: circle;
+  line-height: 1.7;
+  font-size: 1.5rem;
+  font-weight: 300;
 }

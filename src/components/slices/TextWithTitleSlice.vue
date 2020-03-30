@@ -1,8 +1,7 @@
 <template>
-	<div class="section">
-		<prismic-rich-text id="prismic" :field="slice.primary.title1"/>
-	  <prismic-rich-text class="responsiveWidth textLeft" id="prismic"
-		:field="slice.primary.paragraph"/>
+	<div>
+		<prismic-rich-text :field="slice.primary.title1"/>
+	  <prismic-rich-text :field="slice.primary.paragraph"/>
 	</div>
 </template>
 

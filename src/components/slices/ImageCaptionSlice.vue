@@ -1,7 +1,7 @@
 <template>
-	<div class="section">
+	<div>
 	 	<div v-if="$prismic.richTextAsPlain(slice.primary.captiontitle) != ''">
-			  <prismic-rich-text id="prismic" :field="slice.primary.captiontitle"/>
+			  <prismic-rich-text :field="slice.primary.captiontitle"/>
 		</div>
 			<li v-for="item in slice.items" :key="item.id">
 				<div>
@@ -23,7 +23,6 @@ export default {
 </script>
 
 <style>
-
 .image-label {
   display: block;
   text-align: center;
@@ -32,5 +31,4 @@ export default {
   color: #949494;
 	margin-bottom: 5rem;
 }
-
 </style>

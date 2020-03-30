@@ -14,10 +14,8 @@
 				<div class="section">
 					<h2>飯田まりん</h2>
 					<p>岐阜県に生まれ、１３歳で家族とオーストラリアに移住。</p>
-					<p>新しい環境で勉学に励むも、英語力以外のスキルを得たいと強く感じました。</p>
-					<p>「国や言語の垣根を超えたスキルとはなんだろう。」と考えた結果、デザイン職に興味を持ち、メルボルン大学でデザイン学部に進学しました。</p>
-					<p>大学ではデジタルテクノロジーを専攻しHCIについて学びながら、グラフィックデザインとコンピューティングを副専攻。</p>
-					<p>UI/UX、ゲームデザイン、ブランディング、ウェブサイト制作など、幅広い種類の課題に取り組みました。</p>
+					<p>新しい環境で勉学に励むも、英語力以外のスキルを得たいと強く感じました。「国や言語の垣根を超えたスキルとはなんだろう。」と考えた結果、デザイン職に興味を持ち、メルボルン大学でデザイン学部に進学しました。</p>
+					<p>大学ではデジタルテクノロジーを専攻しHCIについて学びながら、グラフィックデザインとコンピューティングを副専攻。UI/UX、ゲームデザイン、ブランディング、ウェブサイト制作など、幅広い種類の課題に取り組みました。</p>
 				</div>
 
 				<div class="links">
@@ -54,13 +52,18 @@
         <li v-for="(timelineEvent, index) in timelineEvents"
         class="flexContainer">
           <div class="flexItem left">
-            <h5 class=lineButtom>{{timelineEvent.startDate}}</h5>
-            <h5>{{timelineEvent.endDate}}</h5>
+            <h5>{{timelineEvent.startDate}}</h5>
+
+						<div v-if="timelineEvent.endDate">
+							<h5 class="lineTop"> {{timelineEvent.endDate}}</h5>
+						</div>
+
           </div>
 
-          <div class="flexItem right links">
-            <a :href="timelineEvent.link" target="_blank"><h2>{{timelineEvent.heading}}</h2></a>
-            <div class="event">
+          <div class="flexItem right">
+            <h2>{{timelineEvent.heading}}</h2>
+
+            <div v-if="timelineEvent.subHeading" class="event">
               <h4>{{timelineEvent.subHeading}}</h4>
               <p>{{timelineEvent.description}}</p>
             </div>
@@ -100,22 +103,31 @@ export default {
         img: require("../assets/IMG_2338.jpg"),
       },
       timelineEvents: [
-        {
+				{
+					startDate: '2011',
+					endDate: '',
+					heading: 'Moved to Australia',
+				},
+				{
           startDate: '2012 Feb',
           endDate: '2016 Nov',
           heading: 'Somerset College',
-					link: 'https://www.somerset.qld.edu.au/'
+					subHeading:'  ',
         },{
           startDate: '2017 Feb',
           endDate:'2019 Dec',
           heading:'University of Melbourne',
           subHeading:'Bachelor of Design',
           description:'Majored in Digital Technologies and minored in Graphic Design and Computing.',
-					link:'https://www.unimelb.edu.au/',
-        }
+        },
+				{
+					startDate: '2020',
+					endDate: '',
+					heading: 'Moved back to Japan',
+				}
       ],
       skills:[
-        {name: 'Microsoft Office Suite', level: 3},
+        {name: 'Microsoft Office Suite', level: 4},
 				{name: 'Adobe XD', level: 4},
 				{name: 'Adobe Illustrator', level: 3},
         {name: 'Adobe Photoshop', level: 2},
@@ -157,7 +169,6 @@ export default {
 }
 </script>
 <style scoped>
-
 .description {
 	width: 500px;
 	text-align: left;
@@ -167,19 +178,19 @@ export default {
   display: inline-block;
 }
 
-.lineButtom {
+.lineTop {
   position: relative;
   display: inline-block;
   height: 70px;
   line-height: 70px;
 }
 
-.lineButtom::after {
+.lineTop::before {
   content: '';
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
+  top: 0;
   width: 1px;
   height: 20px;
   margin: auto;
@@ -194,7 +205,6 @@ export default {
 .right {
   flex-basis: 300px;
   text-align: left;
-  margin-top: 40px;
 }
 
 .left {
@@ -213,6 +223,24 @@ export default {
   height: 1.75em;
   width: 1.75em;
   margin: 5px;
+}
+
+.mark {
+	width: 32px;
+	height: 32px;
+	margin: 6px;
+}
+
+.marks {
+	display:inline-block;
+}
+
+.margin60 {
+	margin: 60px 0px;
+}
+
+.skillBox {
+	width: 190px;
 }
 
 .links a {
@@ -245,25 +273,6 @@ export default {
 
 .links li{
 	margin: 6px;
-}
-
-
-.mark {
-	width: 32px;
-	height: 32px;
-	margin: 6px;
-}
-
-.marks {
-	display:inline-block;
-}
-
-.margin60 {
-	margin: 60px 0px;
-}
-
-.skillBox {
-	width: 190px;
 }
 
 @media screen and (max-width:480px) {

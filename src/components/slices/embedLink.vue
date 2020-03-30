@@ -1,5 +1,5 @@
 <template>
-  <div class='link'>
+  <div class="link">
   	<prismic-embed :field="slice.primary.url"/>
   </div>
 </template>

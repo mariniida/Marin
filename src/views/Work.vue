@@ -2,10 +2,9 @@
   <div v-loading.fullscreen="loading" class="page">
 			<h1>{{$prismic.richTextAsPlain(work.title)}}</h1>
 			<p>{{work.tag}}: {{$prismic.richTextAsPlain(work.tool)}}</p>
-
 			<div id="prismic" class="subsection">
 		    <div class="flexContainer tileContainer">
-					<el-image class="flexItem halfWidth"
+					<el-image class="flexItem WorkImg"
 		        :src="work.landingImg.url"
 		        fit="contain">
 						<div slot="placeholder" class="slot">
@@ -80,5 +79,17 @@ export default {
 <style>
 .description {
   width: 450px;
+}
+
+.description ol li{
+	list-style: circle;
+	line-height: 1.7;
+	font-size: 1.5rem;
+	font-weight: 300;
+}
+
+.WorkImg{
+	width: 45rem;
+	padding: 1rem;
 }
 </style>
