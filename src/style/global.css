@@ -322,3 +322,11 @@ el-divider {
   font-size: 1.5rem;
   font-weight: 300;
 }
+
+p:empty {
+    height: 1.5rem;
+}
+
+p.block-img {
+    text-align: center;
+}
