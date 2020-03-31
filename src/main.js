@@ -6,6 +6,7 @@ import App from './App'
 import router from './router'
 import ElementUI from 'element-ui'
 import locale from 'element-ui/lib/locale/lang/ja'
+
 import 'element-ui/lib/theme-chalk/index.css';
 
 import PrismicVue from 'prismic-vue';
@@ -20,9 +21,8 @@ Vue.use(ElementUI,{
 
 Vue.use(PrismicVue,{
   endpoint: window.prismic.endpoint,
-  linkResolver: linkResolver,
-  htmlSerializer: htmlSerializer,
-  apiOptions: { accessToken }
+  linkResolver,
+  htmlSerializer,
 });
 Vue.config.productionTip = false
 
