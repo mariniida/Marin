@@ -4,12 +4,12 @@
 			<p>{{work.tag}}: {{$prismic.richTextAsPlain(work.tool)}}</p>
 			<div id="prismic" class="subsection">
 		    <div class="flexContainer tileContainer">
-
 					<img class="flexItem WorkImg" fit="contain" :src="work.landingImg.url" >
 					</img>
 
 					<div class="flexItem section description">
-						<p>{{ $prismic.richTextAsPlain(work.summary) }}</p>
+			      <prismic-rich-text :field="work.summary"/>
+
 					</div>
 				</div>
 			</div>
@@ -38,7 +38,7 @@ export default {
         tool: null,
         landingImg: {},
         tag: null,
-        summary: null,
+        summary: [],
         slices: [],
       },
 			loading: true,
@@ -49,12 +49,12 @@ export default {
       this.$prismic.client.getByUID('work', uid)
       .then((document) => {
         if (document) {
-          this.documentId = document.id
-          this.work.title = document.data.title
-          this.work.tool = document.data.tool
-          this.work.landingImg = document.data.landingimg
-          this.work.tag = document.data.tag
-          this.work.summary = document.data.description
+          this.documentId = document.id;
+          this.work.title = document.data.title;
+          this.work.tool = document.data.tool;
+          this.work.landingImg = document.data.landingimg;
+          this.work.tag = document.data.tag;
+          this.work.summary = document.data.description;
 
 					//Set slices as variable
           this.work.slices = document.data.body
@@ -79,6 +79,7 @@ export default {
 
 .description {
   width: 450px;
+	text-align: left;
 }
 
 .description ol li {

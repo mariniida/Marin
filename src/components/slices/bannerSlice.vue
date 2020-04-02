@@ -23,9 +23,6 @@ export default {
 </script>
 
 <style>
-.banner{
-
-}
 
 .prismicContent{
 	overflow: hidden;
