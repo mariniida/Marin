@@ -15,11 +15,10 @@
 					<div v-if="!displayWorks.length" class="section">
 						<h3 class="slotText ">No work to display in this category...</h3>
 					</div>
-          	<div v-for="(work, index) in displayWorks" class="thumbnail flexItem" >
+          	<div v-for="work in displayWorks" :key="work.id" class="thumbnail flexItem" >
 	            <router-link :to="linkResolver(work)">
 	              <div class="thumbnail-overlay"></div>
 	                <img class="thumbnail-image"
-	                style="width: 300px; height: 300px"
 	                :src="work.data.thumbnail.url">
 	                <div class="thumbnail-details fadeIn-top">
 	                  <h4>{{$prismic.richTextAsPlain(work.data.title)}}</h4>
@@ -137,7 +136,8 @@ export default {
 }
 
 .thumbnail-image {
-  width: 100%;
+  width: 300px;
+	height: 300px;
   object-fit: contain;
 }
 

@@ -26,7 +26,7 @@ export default {
     return {
 			profile:{
         tagLine:"I'm Marin Iida.",
-        bio:"An aspiring UI/UX designer based in Japan (for now).",
+        bio:"An aspiring UI/UX designer based in Japan.",
         img: require("../assets/IMG_2338.jpg"),
       },
     }

@@ -14,8 +14,8 @@
 				<div class="section">
 					<h2>飯田まりん</h2>
 					<p>岐阜県に生まれ、１３歳で家族とオーストラリアに移住。</p>
-					<p>新しい環境で勉学に励むも、英語力以外のスキルを得たいと強く感じました。「国や言語の垣根を超えたスキルとはなんだろう。」と考えた結果、デザイン職に興味を持ち、メルボルン大学でデザイン学部に進学しました。</p>
-					<p>大学ではデジタルテクノロジーを専攻しHCIについて学びながら、グラフィックデザインとコンピューティングを副専攻。UI/UX、ゲームデザイン、ブランディング、ウェブサイト制作など、幅広い種類の課題に取り組みました。</p>
+					<p>新しい環境で勉学に励むも、英語力以外のスキルを得たいと強く感じた。「国や言語の垣根を超えたスキルとはなんだろう。」と考えた結果、デザイン職に興味を持ち、メルボルン大学でデザイン学部に進学。</p>
+					<p>大学ではデジタルテクノロジーを専攻しHCIについて学びながら、グラフィックデザインとコンピューティングを副専攻。UI/UX、ゲームデザイン、ブランディング、ウェブサイト制作など、幅広い種類の課題に取り組む。</p>
 				</div>
 
 				<div class="links">
@@ -65,7 +65,8 @@
 
             <div v-if="timelineEvent.subHeading" class="event">
               <h4>{{timelineEvent.subHeading}}</h4>
-              <p>{{timelineEvent.description}}</p>
+              <p>{{timelineEvent.description1}}</p>
+							<p>{{timelineEvent.description2}}</p>
             </div>
           </div>
         </li>
@@ -104,7 +105,7 @@ export default {
       },
       timelineEvents: [
 				{
-					startDate: '2011',
+					startDate: '2011 Jul',
 					endDate: '',
 					heading: 'Moved to Australia',
 				},
@@ -112,16 +113,17 @@ export default {
           startDate: '2012 Feb',
           endDate: '2016 Nov',
           heading: 'Somerset College',
-					subHeading:'  ',
         },{
           startDate: '2017 Feb',
           endDate:'2019 Dec',
           heading:'University of Melbourne',
           subHeading:'Bachelor of Design',
-          description:'Majored in Digital Technologies and minored in Graphic Design and Computing.',
+          description1:"Major: Digital Technologies",
+					description2:"Minor: Graphic Design and Computing",
+
         },
 				{
-					startDate: '2020',
+					startDate: '2020 Feb',
 					endDate: '',
 					heading: 'Moved back to Japan',
 				}
@@ -181,8 +183,7 @@ export default {
 .lineTop {
   position: relative;
   display: inline-block;
-  height: 70px;
-  line-height: 70px;
+  padding-top: 30px;
 }
 
 .lineTop::before {
@@ -198,8 +199,11 @@ export default {
 }
 
 .event {
-  padding-left: 18px;
-  padding-top: 8px;
+  padding-left: 16px;
+}
+
+.event p{
+	line-height: 0.5;
 }
 
 .right {

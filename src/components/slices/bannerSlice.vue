@@ -3,13 +3,12 @@
 		<div v-if="$prismic.richTextAsPlain(slice.primary.bannertitle) != ''">
 	 		<prismic-rich-text :field="slice.primary.bannertitle"/>
 		</div>
-				<li class="flexContainer tileContainer"
+				<li class="flexContainer tileContainer banner"
 				v-for="item in slice.items" :key="item.id">
-					<div class="flexItem halfWidth bannerImg">
-						<el-image class="bannerImg" :src="item.bannerimg.url" fit="contain"></el-image>
+					<div class="flexItem WorkImg">
+						 <prismic-image :field="item.bannerimg"/>
 					</div>
-
-					<div class="flexItem halfWidth bannerTxt">
+					<div class="flexItem bannertext">
 						<prismic-rich-text :field="item.bannertext"/>
           </div>
 				</li>
@@ -24,8 +23,16 @@ export default {
 </script>
 
 <style>
-.halfWidth{
-  width: 30em;
+.banner{
+
+}
+
+.prismicContent{
+	overflow: hidden;
+}
+
+.bannertext {
+	width: 350px;
 }
 
 </style>
