@@ -3,7 +3,7 @@
 	    <ul class="tab">
 				<li v-bind:class="{'active': active == 'Recommended'}"
 				class="navItem" @click=getRecommendedWorks() >
-					オススメ</li>
+					Recommended</li>
 				<li v-bind:class="{'active': active === 'All'}" class="navItem" @click=getAllWorks()>All</li>
 	    	<li v-bind:class="{'active': active === workType }" class="navItem"
 	        v-for="(workType, index) in workTypes"

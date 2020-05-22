@@ -1,5 +1,6 @@
 <template>
   <div v-loading.fullscreen="loading" class="page">
+		<div class="section">
 			<h1>{{ $prismic.richTextAsPlain(work.title) }}</h1>
 			<p>{{work.tag}}: {{$prismic.richTextAsPlain(work.tool)}}</p>
 			<div id="prismic" class="subsection">
@@ -13,11 +14,14 @@
 					</div>
 				</div>
 			</div>
-			<el-collapse class="responsiveWidth">
-			  <el-collapse-item title="詳細を見る" name="1" >
-			   <slices-block :slices="work.slices"/>
-	  		</el-collapse-item>
-			</el-collapse>
+		</div>
+
+		<div class="responsiveWidth section">
+			<el-divider></el-divider>
+			<h1>制作過程</h1>
+			<slices-block :slices="work.slices"/>
+		</div>
+
 </div>
 </template>
 
@@ -93,5 +97,6 @@ export default {
 	width: 45rem;
 	padding: 1rem;
 }
+
 
 </style>
