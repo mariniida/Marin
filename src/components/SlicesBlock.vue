@@ -1,7 +1,7 @@
 <template>
     <div class="prismicContent">
         <!-- Slice section template -->
-        <section v-for="(slice, index) in slices" :key="'slice-' + index">
+        <section v-for="(slice, index) in slices" class="subsection" :key="'slice-' + index">
 
             <!-- Image Gallery slice component -->
             <template v-if="slice.slice_type === 'image_gallery'">

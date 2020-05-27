@@ -146,7 +146,7 @@ export default {
   text-align: center;
   padding-left: 1em;
   padding-right: 1em;
-  width: 100%;
+  width: 90%;
   top: 50%;
   left: 50%;
   opacity: 0;

@@ -16,12 +16,11 @@
 }
 
 .section {
-  margin: 40px 0px;
+  margin: 80px 0px;
 }
 
 .subsection{
-  margin-top: 30px;
-  margin-bottom: 30px;
+  padding-bottom: 5rem;
 }
 
 .width80{
@@ -295,7 +294,6 @@ el-divider {
 
 .prismicContent h2{
   font-size: 2rem;
-  margin: 4rem;
 }
 
 .prismicContent h3{
@@ -309,16 +307,16 @@ el-divider {
 .prismicContent p{
   margin: 0 auto;
   font-weight: 300;
-  line-height: 1.7;
+  line-height: 2;
   text-align: left;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   text-align: justify;
 }
 
 .prismicContent ol li{
   list-style: circle;
-  line-height: 1.7;
-  font-size: 1.5rem;
+  line-height: 2;
+  font-size: 1.75rem;
   font-weight: 300;
 }
 

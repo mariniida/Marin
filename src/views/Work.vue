@@ -15,10 +15,8 @@
 				</div>
 			</div>
 		</div>
-
+		<el-divider></el-divider>
 		<div class="responsiveWidth section">
-			<el-divider></el-divider>
-			<h1>制作過程</h1>
 			<slices-block :slices="work.slices"/>
 		</div>
 
