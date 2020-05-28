@@ -16,7 +16,7 @@
 }
 
 .section {
-  margin: 80px 0px;
+  margin: 40px 0px;
 }
 
 .subsection{
@@ -186,6 +186,62 @@ el-divider {
   border-bottom: 1px solid #AEB8DE !important;
 }
 
+
+/* Prismic Main Content */
+.prismicContent {
+  width: 650px;
+  margin: 0 auto;
+  padding: 20px 0px;
+}
+
+.prismicContent h1{
+  font-size: 2rem;
+  margin-top: 7rem;
+  margin-bottom: 1rem;
+  background-color: #3550B2;
+  color: white;
+}
+
+.prismicContent h2{
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 50px;
+  line-height:1.75;
+  letter-spacing: 0.1rem;
+}
+
+.prismicContent h3{
+  text-align: left;
+  font-weight: 400;
+  font-size: 1.75rem;
+}
+
+.prismicContent p{
+  margin: 0 auto;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 36px;
+  text-align: justify;
+  text-align: left;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  }
+
+.prismicContent ol li{
+  list-style: circle;
+  line-height: 36px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+p:empty {
+    height: 30px;
+}
+
+p.block-img {
+    text-align: center;
+}
+
 /* Media query*/
 @media screen and (max-width:480px) {
 	 /* for iPhone  */
@@ -207,10 +263,14 @@ el-divider {
      text-align: center;
    }
 
+   .prismicContent {
+     width: 100%;
+   }
 
 }
+/*
 @media screen and (min-width:480px) {
-	 /* for iPhone Landscape */
+	  for iPhone Landscape
 
    .link{
      width:100%;
@@ -229,7 +289,12 @@ el-divider {
       text-align: center;
    }
 
-}
+   .prismicContent {
+     width: 100%;
+   }
+
+}*/
+
 @media screen and (min-width:768px) and ( max-width:1024px) {
 	 /* for iPad  */
    .link{
@@ -272,58 +337,4 @@ el-divider {
    	text-align: right;
    }
 
-}
-
-
-
-
-/* Prismic Main Content */
-.prismicContent {
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px 0px;
-}
-
-.prismicContent h1{
-  font-size: 2rem;
-  margin-top: 7rem;
-  margin-bottom: 1rem;
-  background-color: #3550B2;
-  color: white;
-}
-
-.prismicContent h2{
-  font-size: 2rem;
-}
-
-.prismicContent h3{
-  text-align: left;
-  font-weight: 500;
-  font-size: 1.75rem;
-  padding-top: 3rem;
-  color: #3550B2;
-}
-
-.prismicContent p{
-  margin: 0 auto;
-  font-weight: 300;
-  line-height: 2;
-  text-align: left;
-  font-size: 1.75rem;
-  text-align: justify;
-}
-
-.prismicContent ol li{
-  list-style: circle;
-  line-height: 2;
-  font-size: 1.75rem;
-  font-weight: 300;
-}
-
-p:empty {
-    height: 1.5rem;
-}
-
-p.block-img {
-    text-align: center;
 }
