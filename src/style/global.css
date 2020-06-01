@@ -158,8 +158,8 @@ h6{
 
 p {
   font-weight: 300;
-  font-size: 1.5rem;
-  line-height: 1.5;
+  font-size: 16px;
+  line-height: 36px;
 }
 
 /* element-ui */
@@ -195,9 +195,9 @@ el-divider {
 }
 
 .prismicContent h1{
-  font-size: 2rem;
+  font-size: 24px;
+  padding: 12px 0px;
   margin-top: 7rem;
-  margin-bottom: 1rem;
   background-color: #3550B2;
   color: white;
 }
@@ -223,8 +223,8 @@ el-divider {
   line-height: 36px;
   text-align: justify;
   text-align: left;
-  margin-top: 24px;
-  margin-bottom: 24px;
+  margin-top: 28px;
+  margin-bottom: 28px;
   }
 
 .prismicContent ol li{

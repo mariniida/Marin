@@ -22,27 +22,27 @@
 					<h2>Links</h2>
 					<div class="flexContainer">
 						<div class="flexItem">
-						<li v-for="(link, index) in links">
-							<a target="_blank"
-							rel="noopener noreferrer"
-							:href="link.url">
-								<i :class="link.icon"></i>{{link.name}}
-							</a>
-						</li>
-					</div>
-					<div class="flexItem">
-						<li v-for="(mark, index) in marks" class="marks">
-							<a target="_blank"
-							rel="noopener noreferrer"
-							:href="mark.url">
-									<img class="mark" :src="mark.icon">
-							</a>
-						</li>
-					</div>
+
+							<li v-for="(link, index) in links" class="marks">
+								<a target="_blank"
+								rel="noopener noreferrer"
+								:href="link.url">
+									<i :class="link.icon"></i>{{link.name}}
+								</a>
+							</li>
+						</div>
+						<div class="flexItem">
+							<li v-for="(mark, index) in marks" class="marks">
+								<a target="_blank"
+								rel="noopener noreferrer"
+								:href="mark.url">
+										<img class="mark" :src="mark.icon">
+								</a>
+							</li>
+						</div>
 					</div>
 				</div>
       </div>
-
     </div>
 		<el-divider></el-divider>
 
@@ -176,6 +176,11 @@ export default {
 	text-align: left;
 }
 
+.description p{
+	font-size: 16px;
+	line-height: 24px;
+}
+
 .box {
   display: inline-block;
 }
@@ -277,6 +282,10 @@ export default {
 
 .links li{
 	margin: 6px;
+}
+
+.txtLink{
+	width: 100px;
 }
 
 @media screen and (max-width:480px) {

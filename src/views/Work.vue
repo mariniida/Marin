@@ -16,7 +16,7 @@
 			</div>
 		</div>
 		<el-divider></el-divider>
-		<div class="responsiveWidth section">
+		<div class="responsiveWidth ">
 			<slices-block :slices="work.slices"/>
 		</div>
 
@@ -92,7 +92,7 @@ export default {
 }
 
 .WorkImg {
-	width: 45rem;
+	width: 50%;
 	padding: 1rem;
 }
 

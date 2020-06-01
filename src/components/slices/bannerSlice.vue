@@ -29,7 +29,7 @@ export default {
 }
 
 .bannertext {
-	width: 350px;
+	width: 40%;
 }
 
 </style>
